@@ -10,15 +10,15 @@
             <div class="flex items-center gap-2 mt-3">
                 {{-- facebook --}}
                 <a href="#">
-                    <img src="{{ Vite::asset('resources/images/facebook-logo.svg') }}" alt="Logo de Architect OZ">
+                    <img src="{{ Vite::asset('resources/images/facebook-logo.svg') }}" alt="Logo de Architect OZ" class="h-8 w-8">
                 </a>
                 {{-- whatsapp --}}
                 <a href="#">
-                    <img src="{{ Vite::asset('resources/images/whatsapp-logo.svg') }}" alt="Logo de Architect OZ">
+                    <img src="{{ Vite::asset('resources/images/whatsapp-logo.svg') }}" alt="Logo de Architect OZ" class="h-8 w-8">
                 </a>
                 {{-- instagram --}}
                 <a href="#">
-                    <img src="{{ Vite::asset('resources/images/whatsapp-logo.svg') }}" alt="Logo de Architect OZ">
+                    <img src="{{ Vite::asset('resources/images/instagram-logo.svg') }}" alt="Logo de Architect OZ" class="h-8 w-8">
             </div>
         </div>
 
