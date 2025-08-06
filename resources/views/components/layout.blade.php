@@ -8,23 +8,23 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
     <div class="px-10 ">
         <nav class="flex justify-between items-center py-4 border-b border-white/25"> {{--color/0-100 determines the opacity--}}
             <div>
                 <a href="/">
-                    <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="Logo de Architect OZ"> {{--Vite directive to 'import' assets--}}
+                    <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="Logo de Architect OZ" class="w-[100px]"> {{--Vite directive to 'import' assets--}}
                 </a>
             </div>
             <div class="space-x-6">
-                <a href="">Jobs</a>
-                <a href="">Careers</a>
+                <a href="/">Inicio</a>
+                <a href="{{route('about')}}">Trayectoria</a>
                 <a href="">Salaries</a>
                 <a href="">Companies</a>
             </div>
         </nav>
     </div>
-    <main> {{--mx-auto centers items horizontaly ; max-w-[px] determines the maximum width of the container--}}
+    <main class="flex-grow"> {{--mx-auto centers items horizontaly ; max-w-[px] determines the maximum width of the container--}}
         {{ $slot }}
     </main>
     <x-footer/>
