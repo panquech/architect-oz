@@ -11,6 +11,8 @@ class Company extends Model
     /** @use HasFactory<\Database\Factories\CompanyFactory> */
     use HasFactory;
 
+    protected $guarded = [];
+
     public function jobs()
     {
         return $this->belongsToMany(Job::class);
