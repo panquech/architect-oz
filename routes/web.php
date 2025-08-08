@@ -7,3 +7,4 @@ Route::get('/', function () {
 });
 
 Route::view('/contact', 'contact');
+Route::view('/trayectoria', 'about')->name('about');
