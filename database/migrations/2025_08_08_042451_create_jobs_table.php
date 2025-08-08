@@ -14,7 +14,6 @@ return new class extends Migration
     {
         Schema::create('job_listings', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Company::class)->constrained()->cascadeOnDelete();
             $table->string('name');
             $table->string('location');
             $table->string('period');
