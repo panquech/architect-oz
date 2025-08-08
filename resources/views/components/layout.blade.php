@@ -17,8 +17,8 @@
                 </a>
             </div>
             <div class="space-x-6">
-                <a href="/">Inicio</a>
-                <a href="{{route('about')}}">Trayectoria</a>
+                <x-nav-link href="{{route('index')}}" :active="request()->is('/')">Inicio</x-nav-link>
+                <x-nav-link href="{{route('about')}}" :active="request()->is('trayectoria')">Trayectoria</x-nav-link>
             </div>
         </nav>
     </div>
