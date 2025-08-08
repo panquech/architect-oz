@@ -19,8 +19,6 @@
             <div class="space-x-6">
                 <a href="/">Inicio</a>
                 <a href="{{route('about')}}">Trayectoria</a>
-                <a href="">Salaries</a>
-                <a href="">Companies</a>
             </div>
         </nav>
     </div>
