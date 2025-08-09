@@ -18,18 +18,9 @@
     <x-heading>Servicios</x-heading>
     <div class="max-w-[90%] mx-auto">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-6">
-        <x-card/>
-        <x-card/>
-        <x-card/>
-        <x-card/>
-        <x-card/>
-        <x-card/>
-        <x-card/>
-        <x-card/>
-        <x-card/>
-        <x-card/>
-        <x-card/>
-        <x-card/>
+        @foreach ($services as $service)
+          <x-card :$service/>
+        @endforeach
       </div>
     </div>
   </section>
