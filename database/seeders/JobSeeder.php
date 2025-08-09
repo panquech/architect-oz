@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Job;
 
 class JobSeeder extends Seeder
 {
@@ -13,7 +13,7 @@ class JobSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table("job_listings")->insert([
+        $jobs = [
             [
                 "name" => "Proyecto LA NUBE (Torre y Villas)",
                 "company_id"=> 1,
@@ -24,12 +24,12 @@ class JobSeeder extends Seeder
                 "created_at" => now(),
             ],
             [
-                "name" => "Construcción del Edificio para la Recuperación de Áreas Médicas y Ampliación del Servicio de Urgencias del Instituto Nacional de Rehabilitación Luis Guillermo Ibarra Ibarra Construcción de la red de MANO DE OBRA PARA LAS Instalaciones Eléctricas: Alumbrado, Contactos, Alimentadores Generales, Sistema de Tierras, Pararrayos (MANO DE OBRA). ",
+                "name" => "Construcción del Edificio para la Recuperación de Áreas Médicas y Ampliación del Servicio de Urgencias del Instituto Nacional de Rehabilitación Luis Guillermo Ibarra Ibarra ",
                 "company_id" => 2,
                 "address" => "CALZADA MÉXICO XOCHIMILCO No. 289, COLONIA ARENAL DE GUADALUPE, DELEGACIÓN TLALPAN, C.P. 14389, CIUDAD DE MÉXICO",
                 "period" => "Marzo 2019 - Agosto 2019",
                 "position"=> "Residente de Obra",
-                "work"=> "Instalaciones Eléctricas",
+                "work"=> "Construcción de la red de MANO DE OBRA PARA LAS Instalaciones Eléctricas: Alumbrado, Contactos, Alimentadores Generales, Sistema de Tierras, Pararrayos (MANO DE OBRA).",
                 "created_at" => now(),
             ],
             [
@@ -89,7 +89,7 @@ class JobSeeder extends Seeder
             [
                 "name" => "Análisis, Propuesta y Cuantificación Para el Proyecto de Nave Industrial en Querétaro. ",
                 "company_id" => 6,
-                "address" => "",
+                "address" => "Quéretaro",
                 "period" => "Mayo 2015 - Agosto 2015",
                 "position"=> "Analista",
                 "work"=> "Cuantificación en Instalaciones Hidrosanitarias y Protección Contra Incendio, para generar presupuestos con matrices de P.U.",
@@ -98,7 +98,7 @@ class JobSeeder extends Seeder
             [
                 "name" => "Análisis, Propuesta y Cuantificación Para el Proyecto de Tren Ligero de Guadalajara, Jalisco",
                 "company_id" => 6,
-                "address" => "",
+                "address" => "Guadalajara, Jalisco",
                 "period" => "Mayo 2015 - Agosto 2015",
                 "position"=> "Analista",
                 "work"=> "Cuantificación en Instalaciones Hidrosanitarias y Protección Contra Incendio, para generar presupuestos con matrices de P.U.",
@@ -275,6 +275,9 @@ class JobSeeder extends Seeder
                 "work"=> "Dibujante",
                 "created_at" => now(),
             ],            
-        ]);
+        ];
+        foreach ($jobs as $job) {
+            Job::create($job);
+        }
     }
 }
