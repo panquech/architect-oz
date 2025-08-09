@@ -1,9 +1,10 @@
 <x-layout>
     <x-heading>Trayectoria</x-heading>
-    <div class="max-w-[1400px] mx-auto space-y-4 mt-10">
-        <x-card-wide/>
-        <x-card-wide/>
-        <x-card-wide/>
-        <x-card-wide/>  
+    {{-- columns-# to determine the number of cols --}}
+    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 max-w-[1400px] mx-auto space-y-4 mt-10">
+        @foreach ($jobs as $job)
+            {{-- each card has the class of break-inside-avoid to make the 'grid' masonry-like --}}
+            <x-card-wide :$job/>
+        @endforeach
     </div>
 </x-layout>
