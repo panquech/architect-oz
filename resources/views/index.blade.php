@@ -1,5 +1,5 @@
 <x-layout>
-  <section class="min-h-[calc(100vh-80px)] flex items-stretch">
+  <section class="min-h-[calc(100vh-80px)] flex items-stretch mb-10">
     <div class="grid grid-cols-1 md:grid-cols-2 w-full">
       {{-- izq --}}
       <div class="flex items-center justify-center p-10">
@@ -14,9 +14,9 @@
     </div>
   </section>
 
-  <section class="min-h-screen ">
+  <section class="max-w-[90%] mx-auto">
     <x-heading>Servicios</x-heading>
-    <div class="max-w-[90%] mx-auto">
+    <div class="">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-6">
         @foreach ($services as $service)
           <x-card :$service/>
