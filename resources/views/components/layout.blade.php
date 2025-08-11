@@ -19,6 +19,7 @@
             <div class="space-x-6">
                 <x-nav-link href="{{route('index')}}" :active="request()->is('/')">Inicio</x-nav-link>
                 <x-nav-link href="{{route('jobs.index')}}" :active="request()->is('trayectoria')">Trayectoria</x-nav-link>
+                <x-nav-link href="{{route('contact.create')}}" :active="request()->is('contact')">Contacto</x-nav-link>
             </div>
         </nav>
     </div>

@@ -111,8 +111,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'contacto@architectoz.com.mx'), // When using smtp, this value will be overwritten by MAIL_USERNAME for security purposes
+        'name' => env('MAIL_FROM_NAME', 'ArchitectOZ'),
     ],
 
 ];
